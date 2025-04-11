@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Rimuovi Sfondo - Gratis Online</title>
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>Rimuovi Sfondo Online</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="comefunziona.html">Come funziona</a>
+      <a href="chisiamo.html">Chi siamo</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+  <main>
+    <p>Carica un'immagine e rimuovi lo sfondo in pochi secondi, gratis e senza registrazione!</p>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <input type="file" id="imageInput" accept="image/*"><br><br>
+    <button onclick="removeBackground()">Rimuovi Sfondo</button>
+    <div id="result"></div>
+  </main>
+  <footer>
+    <p>&copy; 2025 RimuoviSfondo.it</p>
+  </footer>
+  <script>
+    function removeBackground() {
+      const input = document.getElementById('imageInput');
+      const resultDiv = document.getElementById('result');
+      if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          resultDiv.innerHTML = '<p>Simulazione rimozione sfondo:</p><img src="' + e.target.result + '">';
+        }
+        reader.readAsDataURL(input.files[0]);
+      } else {
+        alert("Seleziona un'immagine.");
+      }
+    }
+  </script>
+</body>
+</html>
